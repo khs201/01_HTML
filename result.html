@@ -6,17 +6,15 @@
     <title>결과 페이지</title>
 </head>
 <body>
-    <h3>입력된 사용자 이름 : <span id="user-name-result"></span></h3>
+    <h3>입력된 사용자 이름 : <span id="name-result"></span></h3>
 
     <!-- JS 맛보기 -->
     <script>
         const params = new URL(location.href).searchParams;
-
-        const nameresult = doc.getElimentById("user-name-result")
-
-        nameresult.innerText = params.get("user-name-result")
-    </script>
-
+        const nameresult = document.getElementById("name-result");
+    
+        nameresult.innerText = params.get("user-name");
+      </script>
     <hr>
     <h3> 입력된 사용자 아이디 : <span id="id-result"></span> </h3>
     <h3> 입력된 사용자 비밀번호 : <span id="pw-result"></span> </h3>
